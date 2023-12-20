@@ -18,7 +18,10 @@ html {
   width: 300px;
   transition-property: all;
   transition-duration: 750ms;
+  display: flex;
+  justify-content: end;
 }
+
 .list {
   height: 100%;
   width: 100%;
@@ -29,6 +32,7 @@ html {
 .list-background:hover {
   left: 0;
 }
+
 .list-background:hover .menu-here {
   opacity: 0;
   visibility: hidden;
@@ -36,14 +40,25 @@ html {
 
 .list li {
   margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
 }
+
+.container {
+  position: relative;
+  right: 0;
+  height: 100%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 span,
 p {
   color: white;
   text-transform: uppercase;
   font-size: 28px;
-  position: relative;
-  padding-left: 30px;
   transition-duration: 400ms;
   transition-property: color;
 }
@@ -67,10 +82,9 @@ span:hover {
 }
 
 .menu-here {
-  position: absolute;
-  right: -17%;
-  top: 40%;
   transform: rotate(90deg);
+  white-space: nowrap;
+  height: 20px;
   margin: 0;
   cursor: pointer;
   font-size: 16px;
